@@ -183,7 +183,7 @@ void run_perf2bolt(const ocolos_env* ocolos_environ){
    char path1[3000];
 
    if (func_exec_count==1){
-      string command = ""+ocolos_environ->perf2bolt_path+" -p "+
+      string command = ""+ocolos_environ->perf2bolt_path+" --ignore-build-id "+" -p "+
                        ocolos_environ->tmp_data_path+
                        "perf.data -o "+
                        ocolos_environ->tmp_data_path+
